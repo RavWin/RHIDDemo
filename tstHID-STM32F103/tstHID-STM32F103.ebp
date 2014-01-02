@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<EmBlocks_project_file>
+	<EmBlocksVersion release="1.41" revision="1" />
+	<FileVersion major="1" minor="0" />
+	<Project>
+		<Option title="tstHID-STM32F103" />
+		<Option pch_mode="2" />
+		<Option compiler="armgcc_eb" />
+		<Build>
+			<Target title="F103_MD_Debug">
+				<Option output="bin\DebugMD\tstHID-STM32F103.elf" />
+				<Option object_output="obj\DebugMD\" />
+				<Option type="0" />
+				<Option create_hex="1" />
+				<Option compiler="armgcc_eb" />
+				<Option projectDeviceOptionsRelation="0" />
+				<Compiler>
+					<Add option="-Wall" />
+					<Add option="-O0" />
+					<Add option="-g3" />
+					<Add option="-DSTM32F10X_MD" />
+					<Add option="-DminiSTM32F103C8" />
+					<Add option="-D__DONT_INIT_VTABLE" />
+				</Compiler>
+				<Assembler>
+					<Add option="-Wa,--gdwarf-2" />
+				</Assembler>
+			</Target>
+			<Target title="F103_MD_Release">
+				<Option output="bin\ReleaseMD\tstHID-STM32F103.elf" />
+				<Option object_output="obj\ReleaseMD\" />
+				<Option type="0" />
+				<Option create_hex="1" />
+				<Option compiler="armgcc_eb" />
+				<Option projectDeviceOptionsRelation="0" />
+				<Compiler>
+					<Add option="-fdata-sections" />
+					<Add option="-ffunction-sections" />
+					<Add option="-O2" />
+					<Add option="-g2" />
+					<Add option="-DSTM32F10X_MD" />
+					<Add option="-DminiSTM32F103C8" />
+				</Compiler>
+				<Assembler>
+					<Add option="-Wa,--no-warn" />
+				</Assembler>
+			</Target>
+			<Target title="F103_HD_Debug">
+				<Option output="bin\DebugHD\tstHID-STM32F103.elf" />
+				<Option object_output="obj\DebugHD\" />
+				<Option type="0" />
+				<Option create_hex="1" />
+				<Option compiler="armgcc_eb" />
+				<Option projectDeviceOptionsRelation="0" />
+				<Compiler>
+					<Add option="-Wall" />
+					<Add option="-O0" />
+					<Add option="-g3" />
+					<Add option="-DSTM32F10X_HD" />
+					<Add option="-DminiSTM32F103V" />
+					<Add option="-D__DONT_INIT_VTABLE" />
+				</Compiler>
+				<Assembler>
+					<Add option="-Wa,--gdwarf-2" />
+				</Assembler>
+			</Target>
+			<Target title="F103_HD_Release">
+				<Option output="bin\ReleaseHD\tstHID-STM32F103.elf" />
+				<Option object_output="obj\ReleaseHD\" />
+				<Option type="0" />
+				<Option create_hex="1" />
+				<Option compiler="armgcc_eb" />
+				<Option projectDeviceOptionsRelation="0" />
+				<Compiler>
+					<Add option="-fdata-sections" />
+					<Add option="-ffunction-sections" />
+					<Add option="-O2" />
+					<Add option="-g2" />
+					<Add option="-DSTM32F10X_HD" />
+					<Add option="-DminiSTM32F103V" />
+				</Compiler>
+				<Assembler>
+					<Add option="-Wa,--no-warn" />
+				</Assembler>
+			</Target>
+			<Environment>
+				<Variable name="cpuname" value="" />
+			</Environment>
+		</Build>
+		<Device>
+			<Add option="$device=cortex-m3" />
+			<Add option="$lscript=gcc_arm.ld" />
+			<Add option="$stack=0x0100" />
+			<Add option="$heap=0x0000" />
+		</Device>
+		<Compiler>
+			<Add option="-Dassert_param(expr)=((void)0)" />
+			<Add option="-DUSE_STDPERIPH_DRIVER" />
+			<Add directory=".\Inc" />
+			<Add directory=".\cmsis" />
+			<Add directory=".\cmsis_boot" />
+			<Add directory=".\stm_lib\src" />
+			<Add directory=".\stm_lib\inc" />
+			<Add directory=".\USB-FS\inc" />
+			<Add directory=".\USB-FS\src" />
+		</Compiler>
+		<Linker>
+			<Add option="-eb_start_files" />
+			<Add option="-Wl,--gc-sections" />
+		</Linker>
+		<Unit filename="Src\hw_config.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Src\main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Src\stm32_it.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Src\usb_desc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Src\usb_endp.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Src\usb_istr.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Src\usb_prop.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Src\usb_pwr.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Svd\STM32F100xx.svd" />
+		<Unit filename="Svd\STM32F101xx.svd" />
+		<Unit filename="Svd\STM32F102xx.svd" />
+		<Unit filename="Svd\STM32F103xx.svd" />
+		<Unit filename="Svd\STM32F105xx.svd" />
+		<Unit filename="Svd\STM32F107xx.svd" />
+		<Unit filename="USB-FS\inc\usb_core.h" />
+		<Unit filename="USB-FS\inc\usb_def.h" />
+		<Unit filename="USB-FS\inc\usb_init.h" />
+		<Unit filename="USB-FS\inc\usb_int.h" />
+		<Unit filename="USB-FS\inc\usb_lib.h" />
+		<Unit filename="USB-FS\inc\usb_mem.h" />
+		<Unit filename="USB-FS\inc\usb_regs.h" />
+		<Unit filename="USB-FS\inc\usb_sil.h" />
+		<Unit filename="USB-FS\inc\usb_type.h" />
+		<Unit filename="USB-FS\src\usb_core.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="USB-FS\src\usb_init.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="USB-FS\src\usb_int.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="USB-FS\src\usb_mem.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="USB-FS\src\usb_regs.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="USB-FS\src\usb_sil.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="cmsis\core_cm3.h" />
+		<Unit filename="cmsis\core_cmFunc.h" />
+		<Unit filename="cmsis\core_cmInstr.h" />
+		<Unit filename="cmsis_boot\startup\startup_stm32f10x_hd.S">
+			<Option compilerVar="CC" />
+			<Option target="F103_HD_Debug" />
+			<Option target="F103_HD_Release" />
+		</Unit>
+		<Unit filename="cmsis_boot\startup\startup_stm32f10x_md.S">
+			<Option compilerVar="CC" />
+			<Option target="F103_MD_Debug" />
+			<Option target="F103_MD_Release" />
+		</Unit>
+		<Unit filename="cmsis_boot\stm32f10x.h" />
+		<Unit filename="cmsis_boot\stm32f10x_conf.h" />
+		<Unit filename="cmsis_boot\system_stm32f10x.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="cmsis_boot\system_stm32f10x.h" />
+		<Unit filename="gcc_arm.ld" />
+		<Unit filename="inc\hw_config.h" />
+		<Unit filename="inc\platform_config.h" />
+		<Unit filename="inc\stm32_it.h" />
+		<Unit filename="inc\usb_conf.h" />
+		<Unit filename="inc\usb_desc.h" />
+		<Unit filename="inc\usb_istr.h" />
+		<Unit filename="inc\usb_prop.h" />
+		<Unit filename="inc\usb_pwr.h" />
+		<Unit filename="readme.txt" />
+		<Unit filename="stm_lib\inc\misc.h" />
+		<Unit filename="stm_lib\inc\stm32f10x_adc.h" />
+		<Unit filename="stm_lib\inc\stm32f10x_bkp.h" />
+		<Unit filename="stm_lib\inc\stm32f10x_can.h" />
+		<Unit filename="stm_lib\inc\stm32f10x_cec.h" />
+		<Unit filename="stm_lib\inc\stm32f10x_crc.h" />
+		<Unit filename="stm_lib\inc\stm32f10x_dac.h" />
+		<Unit filename="stm_lib\inc\stm32f10x_dbgmcu.h" />
+		<Unit filename="stm_lib\inc\stm32f10x_dma.h" />
+		<Unit filename="stm_lib\inc\stm32f10x_exti.h" />
+		<Unit filename="stm_lib\inc\stm32f10x_flash.h" />
+		<Unit filename="stm_lib\inc\stm32f10x_fsmc.h" />
+		<Unit filename="stm_lib\inc\stm32f10x_gpio.h" />
+		<Unit filename="stm_lib\inc\stm32f10x_i2c.h" />
+		<Unit filename="stm_lib\inc\stm32f10x_iwdg.h" />
+		<Unit filename="stm_lib\inc\stm32f10x_pwr.h" />
+		<Unit filename="stm_lib\inc\stm32f10x_rcc.h" />
+		<Unit filename="stm_lib\inc\stm32f10x_rtc.h" />
+		<Unit filename="stm_lib\inc\stm32f10x_sdio.h" />
+		<Unit filename="stm_lib\inc\stm32f10x_spi.h" />
+		<Unit filename="stm_lib\inc\stm32f10x_tim.h" />
+		<Unit filename="stm_lib\inc\stm32f10x_usart.h" />
+		<Unit filename="stm_lib\inc\stm32f10x_wwdg.h" />
+		<Unit filename="stm_lib\src\misc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="stm_lib\src\stm32f10x_exti.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="stm_lib\src\stm32f10x_gpio.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="stm_lib\src\stm32f10x_pwr.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="stm_lib\src\stm32f10x_rcc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="stm_lib\src\stm32f10x_usart.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<debugger>
+				<target_debugging_settings target="F103_MD_Release" active_interface="ST-link">
+					<debug_interface interface_id="ST-link" ip_address="localhost" ip_port="4242" path="${EMBLOCKS}\share\contrib" executable="STLinkGDB.exe" description="" dont_start_server="false" backoff_time="1000" options="0" active_family="STMicroelectronics">
+						<family_options family_id="STMicroelectronics">
+							<option opt_id="ID_JTAG_SWD" opt_value="swd" />
+							<option opt_id="ID_VECTOR_START" opt_value="0x08000000" />
+							<option opt_id="ID_LOAD_PROGRAM" opt_value="1" />
+							<option opt_id="ID_RAM_EXEC" opt_value="0" />
+							<option opt_id="ID_VEC_TABLE" opt_value="1" />
+							<option opt_id="ID_VERBOSE_LEVEL" opt_value="3" />
+						</family_options>
+					</debug_interface>
+				</target_debugging_settings>
+			</debugger>
+			<envvars />
+		</Extensions>
+	</Project>
+</EmBlocks_project_file>

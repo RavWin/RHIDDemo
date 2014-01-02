@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<EmBlocks_layout_file>
+	<ActiveTarget name="F103_HD_Debug" />
+	<File name="STM32_USB-FS-Device_Driver\inc\usb_regs.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="23604" topLine="495" />
+		</Cursor>
+	</File>
+	<File name="STM32_USB-FS-Device_Driver\src\usb_init.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="3225" topLine="36" />
+		</Cursor>
+	</File>
+	<File name="STM32_USB-FS-Device_Driver\src\usb_regs.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="19887" topLine="504" />
+		</Cursor>
+	</File>
+	<File name="STM32_USB-FS-Device_Driver\src\usb_sil.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2442" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="Src\hw_config.c" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2373" topLine="83" />
+		</Cursor>
+	</File>
+	<File name="Src\main.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="420" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="Src\stm32_it.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="6645" topLine="156" />
+		</Cursor>
+	</File>
+	<File name="Src\usb_desc.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="10412" topLine="142" />
+		</Cursor>
+	</File>
+	<File name="Src\usb_endp.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1718" topLine="75" />
+		</Cursor>
+	</File>
+	<File name="Src\usb_istr.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="4568" topLine="124" />
+		</Cursor>
+	</File>
+	<File name="Src\usb_prop.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="7620" topLine="227" />
+		</Cursor>
+	</File>
+	<File name="Src\usb_pwr.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="8209" topLine="238" />
+		</Cursor>
+	</File>
+	<File name="cmsis_boot\stm32f10x.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="28569" topLine="365" />
+		</Cursor>
+	</File>
+	<File name="cmsis_boot\stm32f10x_conf.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="713" topLine="44" />
+		</Cursor>
+	</File>
+	<File name="cmsis_boot\system_stm32f10x.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="982" topLine="372" />
+		</Cursor>
+	</File>
+	<File name="cmsis_boot\system_stm32f10x.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1025" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="inc\hw_config.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1350" topLine="16" />
+		</Cursor>
+	</File>
+	<File name="inc\platform_config.h" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="3173" topLine="114" />
+		</Cursor>
+	</File>
+	<File name="inc\stm32_it.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1973" topLine="14" />
+		</Cursor>
+	</File>
+	<File name="inc\usb_conf.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2375" topLine="1" />
+		</Cursor>
+	</File>
+	<File name="inc\usb_desc.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2096" topLine="39" />
+		</Cursor>
+	</File>
+	<File name="inc\usb_prop.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2653" topLine="39" />
+		</Cursor>
+	</File>
+	<File name="stm_lib\src\stm32f10x_gpio.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="11831" topLine="327" />
+		</Cursor>
+	</File>
+</EmBlocks_layout_file>

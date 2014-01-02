@@ -1,0 +1,393 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\UsbHidDemonstrator.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "USB_Blue.ico"
+IDI_ICON_LED_OFF        ICON                    "LedOff.ico"
+IDI_ICON_LED_ON         ICON                    "LedOn.ico"
+IDI_ICON1               ICON                    "GraphicView.ico"
+IDI_ICON2               ICON                    "Transfere.ico"
+IDI_ICON4               ICON                    "GraphicConfig.ico"
+IDI_ICON3               ICON                    "HID Capabilities.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG  0, 0, 235, 55
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About USB Hid Demonstrator"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "USB Hid Demonstrator Version 1.0.2",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "STMicroelectronics  Copyright  (C) 2010",IDC_STATIC,40,25,168,8
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,14,WS_GROUP
+END
+
+IDD_USBHIDDEMONSTRATOR_DIALOG DIALOGEX 0, 0, 492, 251
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "USB HID Demonstrator (v1.0.2)"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "",IDC_STATIC,134,0,356,25
+    COMBOBOX        IDC_HID_TARGETS,200,8,284,51,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "USB HID Target",IDC_STATIC,140,10,53,8
+    GROUPBOX        "",IDC_STATIC,2,0,127,249
+    GROUPBOX        "",IDC_FRAMES_CONTAINER,134,23,356,226
+    CONTROL         "Device capabilities",IDC_SHOW_DESCROPTOR_VIEW,"Button",BS_OWNERDRAW | BS_LEFT | BS_VCENTER | BS_MULTILINE | BS_NOTIFY | BS_FLAT | WS_TABSTOP,8,9,116,26,WS_EX_TRANSPARENT
+    CONTROL         "Feature transfer",IDC_SHOW_FEATURE_VIEW,"Button",BS_OWNERDRAW | BS_LEFT | BS_VCENTER | BS_MULTILINE | BS_NOTIFY | BS_FLAT | NOT WS_VISIBLE | WS_TABSTOP,8,217,116,26,WS_EX_TRANSPARENT
+    CONTROL         "Input/Output transfer",IDC_SHOW_REPORT_VIEW,"Button",BS_OWNERDRAW | BS_LEFT | BS_VCENTER | BS_MULTILINE | BS_NOTIFY | BS_FLAT | WS_TABSTOP,8,37,116,26,WS_EX_TRANSPARENT
+    CONTROL         "Graphic view",IDC_SHOW_GRAPHIC_VIEW,"Button",BS_OWNERDRAW | BS_LEFT | BS_VCENTER | BS_MULTILINE | BS_NOTIFY | BS_FLAT | WS_TABSTOP,8,65,116,26,WS_EX_TRANSPARENT
+    LISTBOX         IDC_TARGETS_CTRL,239,69,145,115,LBS_SORT | LBS_NOINTEGRALHEIGHT | NOT WS_VISIBLE | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Graphic customization",IDC_GRAPHIC_CONFIG,"Button",BS_OWNERDRAW | BS_LEFT | BS_VCENTER | BS_MULTILINE | BS_NOTIFY | BS_FLAT | WS_TABSTOP,8,93,116,26,WS_EX_TRANSPARENT
+    PUSHBUTTON      "SetFeature",IDC_SET_FEATURE,14,125,50,14,NOT WS_VISIBLE
+    PUSHBUTTON      "GetFeature",IDC_GET_FEATURE,66,125,50,14,NOT WS_VISIBLE
+    GROUPBOX        "Output mode",IDC_STATIC,8,145,116,41
+    CONTROL         "Use SET_REPORT",IDC_USE_SET_REPORT,"Button",BS_AUTORADIOBUTTON | WS_GROUP,15,159,79,10
+    CONTROL         "Use SET_FEATURE",IDC_USE_SET_FEATURE,"Button",BS_AUTORADIOBUTTON,15,172,82,10
+END
+
+IDD_DESCRIPTOR_VIEW DIALOGEX 0, 0, 351, 216
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LTEXT           "Product identifier",IDC_STATIC,127,17,54,8
+    LTEXT           "Vendor identifier",IDC_STATIC,8,17,52,8
+    EDITTEXT        IDC_PID,185,15,40,12,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_VID,65,15,40,12,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Version number",IDC_STATIC,245,17,50,8
+    EDITTEXT        IDC_VERSION,300,15,40,12,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "",IDC_CAPABILITIES_LIST,95,55,175,145,0,WS_EX_TRANSPARENT
+END
+
+IDD_FEATURE_VIEW DIALOG  0, 0, 301, 181
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+END
+
+IDD_REPORT_VIEW DIALOGEX 0, 0, 351, 216
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_OUTPUT_HEX_EDITOR,6,119,340,70,ES_MULTILINE | ES_UPPERCASE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_NOHIDESEL | ES_WANTRETURN | WS_VSCROLL,WS_EX_TRANSPARENT | WS_EX_STATICEDGE
+    EDITTEXT        IDC_SIZE_OUTPUT_HEX_EDIT,109,102,40,14,ES_UPPERCASE | ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Output Report byte length  (h)",IDC_STATIC,6,104,94,8
+    PUSHBUTTON      "&Write",IDC_WRITE_BTN,289,196,50,14
+    LTEXT           "Bytes",IDC_STATIC,154,104,18,8
+    EDITTEXT        IDC_INPUT_HEX_EDITOR,6,23,340,70,ES_MULTILINE | ES_UPPERCASE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_NOHIDESEL | ES_WANTRETURN | WS_VSCROLL,WS_EX_TRANSPARENT | WS_EX_STATICEDGE
+    GROUPBOX        "",IDC_STATIC,6,187,340,28
+    EDITTEXT        IDC_SIZE_INPUT_HEX_EDIT,109,7,40,14,ES_UPPERCASE | ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Input Report byte length  (h)",IDC_STATIC,6,9,89,8
+    LTEXT           "Bytes",IDC_STATIC,154,9,18,8
+END
+
+IDD_GRAPHIC_VIEW DIALOGEX 0, 0, 351, 216
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "Progress1",IDC_ROLLER1,"msctls_progress32",0x1,155,36,165,15,WS_EX_DLGMODALFRAME
+    LTEXT           "FFh",IDC_RV1,323,40,15,8,SS_CENTERIMAGE
+    ICON            IDI_ICON_LED_OFF,IDC_BUTTON1,116,25,20,20
+    ICON            IDI_ICON_LED_OFF,IDC_BUTTON2,116,45,20,20
+    ICON            IDI_ICON_LED_OFF,IDC_BUTTON3,116,65,20,20
+    ICON            IDI_ICON_LED_OFF,IDC_BUTTON4,116,85,20,20
+    ICON            IDI_ICON_LED_OFF,IDC_BUTTON5,116,105,20,20
+    ICON            IDI_ICON_LED_OFF,IDC_BUTTON6,116,125,20,20
+    ICON            IDI_ICON_LED_OFF,IDC_BUTTON7,116,144,20,20
+    GROUPBOX        "Buttons",IDC_STATIC,6,5,136,175
+    CTEXT           "Button 1 Report ID (h)",IDC_BL1,11,25,75,20,SS_CENTERIMAGE
+    CTEXT           "Button 2 Report ID (h)",IDC_BL2,11,45,75,20,SS_CENTERIMAGE
+    CTEXT           "Button 3 Report ID (h)",IDC_BL3,11,65,75,20,SS_CENTERIMAGE
+    CTEXT           "Button 4 Report ID (h)",IDC_BL4,11,85,75,20,SS_CENTERIMAGE
+    CTEXT           "Button 6 Report ID (h)",IDC_BL6,11,125,75,20,SS_CENTERIMAGE
+    CTEXT           "Button 7 Report ID (h)",IDC_BL7,11,144,75,20,SS_CENTERIMAGE
+    CTEXT           "Button 5 Report ID (h)",IDC_BL5,11,105,75,20,SS_CENTERIMAGE
+    EDITTEXT        IDC_RID_BUTTON1,90,28,22,14,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_RID_BUTTON2,90,48,22,14,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_RID_BUTTON3,90,68,22,14,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_RID_BUTTON4,90,88,22,14,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_RID_BUTTON5,90,108,22,14,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_RID_BUTTON6,90,128,22,14,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_RID_BUTTON7,90,147,22,14,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Var Input 1 Report ID (h)",IDC_RL1,158,23,78,8,SS_CENTERIMAGE
+    EDITTEXT        IDC_RID_ROLLER1,240,22,22,12,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Var Input 2 Report ID (h)",IDC_RL2,157,58,78,8,SS_CENTERIMAGE
+    EDITTEXT        IDC_RID_ROLLER2,239,56,22,12,ES_AUTOHSCROLL | ES_READONLY
+    CONTROL         "Progress1",IDC_ROLLER2,"msctls_progress32",0x1,155,70,165,15,WS_EX_DLGMODALFRAME
+    LTEXT           "FFh",IDC_RV2,323,74,15,8,SS_CENTERIMAGE
+    GROUPBOX        "Variable Inputs",IDC_STATIC,147,5,198,85
+    GROUPBOX        "Leds",IDC_STATIC,147,91,198,89
+    CONTROL         "Led 1 Report ID (h)",IDC_LED1_ON_OFF,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,152,99,75,20
+    CONTROL         "Led 2 Report ID (h)",IDC_LED2_ON_OFF,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,152,118,75,20
+    CONTROL         "Led 3 Report ID (h)",IDC_LED3_ON_OFF,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,152,137,75,20
+    ICON            IDI_ICON_LED_OFF,IDC_LED1,258,99,20,20
+    ICON            IDI_ICON_LED_OFF,IDC_LED2,258,118,20,20
+    ICON            IDI_ICON_LED_OFF,IDC_LED3,258,137,20,20
+    EDITTEXT        IDC_RID_LED1,232,102,22,14,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_RID_LED2,232,121,22,14,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_RID_LED3,232,140,22,14,ES_AUTOHSCROLL | ES_READONLY
+    GROUPBOX        "",IDC_STATIC,6,180,340,30
+    CONTROL         "Slider1",IDC_VARIABLE,"msctls_trackbar32",TBS_TOP | TBS_NOTICKS | WS_TABSTOP,147,189,170,20,WS_EX_TRANSPARENT
+    CTEXT           "Variable Output Report ID (h)",IDC_VL,11,187,102,20,SS_CENTERIMAGE
+    EDITTEXT        IDC_RID_VARIABLE,116,190,25,14,ES_AUTOHSCROLL | ES_READONLY
+    CTEXT           "00h",IDC_VI,317,191,20,15,SS_CENTERIMAGE
+    CONTROL         "Led 4 Report ID (h)",IDC_LED4_ON_OFF,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,152,156,75,20
+    ICON            IDI_ICON_LED_OFF,IDC_LED4,258,156,20,20
+    EDITTEXT        IDC_RID_LED4,232,159,22,14,ES_AUTOHSCROLL | ES_READONLY
+END
+
+IDD_GRAPHIC_CONFIG DIALOGEX 0, 0, 351, 196
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "",IDC_STATIC,4,13,165,127
+    GROUPBOX        "",IDC_STATIC,174,13,171,82
+    GROUPBOX        "",IDC_STATIC,174,109,171,81
+    GROUPBOX        "",IDC_STATIC,4,155,165,35
+    CONTROL         "Button 1:  Report ID (h)",IDC_SHB1,"Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,17,23,89,10
+    CONTROL         "Button 2:  Report ID (h)",IDC_SHB2,"Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,17,40,89,10
+    CONTROL         "Button 3:  Report ID (h)",IDC_SHB3,"Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,17,57,89,10
+    CONTROL         "Button 4:  Report ID (h)",IDC_SHB4,"Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,17,74,89,10
+    CONTROL         "Button 5:  Report ID (h)",IDC_SHB5,"Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,17,91,89,10
+    CONTROL         "Button 7:  Report ID (h)",IDC_SHB7,"Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,17,124,89,10
+    CONTROL         "Button 5:  Report ID (h)",IDC_SHB6,"Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,17,108,89,10
+    EDITTEXT        B1,119,20,25,14,ES_AUTOHSCROLL
+    EDITTEXT        B2,119,37,25,14,ES_AUTOHSCROLL
+    EDITTEXT        B3,119,54,25,14,ES_AUTOHSCROLL
+    EDITTEXT        B4,119,71,25,14,ES_AUTOHSCROLL
+    EDITTEXT        B5,119,88,25,14,ES_AUTOHSCROLL
+    EDITTEXT        B6,119,105,25,14,ES_AUTOHSCROLL
+    EDITTEXT        B7,119,122,25,14,ES_AUTOHSCROLL
+    CONTROL         "Led 1:  Report ID (h)",IDC_SHL1,"Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,187,23,81,10
+    CONTROL         "Led 2:  Report ID (h)",IDC_SHL2,"Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,187,40,81,10
+    CONTROL         "Led 3:  Report ID (h)",IDC_SHL3,"Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,187,57,81,10
+    EDITTEXT        L1,282,20,25,14,ES_AUTOHSCROLL
+    EDITTEXT        L2,282,37,25,14,ES_AUTOHSCROLL
+    EDITTEXT        L3,282,54,25,14,ES_AUTOHSCROLL
+    CONTROL         "Variable Output: Report ID (h)",IDC_SHVO,"Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,17,172,109,10
+    EDITTEXT        VO,129,170,25,14,ES_AUTOHSCROLL
+    CONTROL         "Variable Input 1: Report ID (h)",IDC_SHVI1,"Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,187,128,110,10
+    EDITTEXT        VI1,297,125,25,14,ES_AUTOHSCROLL
+    CONTROL         "Variable Input 2: Report ID (h)",IDC_SHVI2,"Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,187,144,110,10
+    EDITTEXT        VI2,297,142,25,14,ES_AUTOHSCROLL
+    CTEXT           "Buttons",IDC_STATIC,4,5,165,10,0,WS_EX_TRANSPARENT
+    CTEXT           "Leds",IDC_STATIC,174,5,171,10,0,WS_EX_TRANSPARENT
+    CTEXT           "Variable Output",IDC_STATIC,4,147,165,10,0,WS_EX_TRANSPARENT
+    CTEXT           "Variable Inputs",IDC_STATIC,174,102,171,10,0,WS_EX_TRANSPARENT
+    CONTROL         "Led 4:  Report ID (h)",IDC_SHL4,"Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,187,73,81,10
+    EDITTEXT        L4,282,70,25,14,ES_AUTOHSCROLL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,2,0
+ PRODUCTVERSION 1,0,2,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "STMicroelectronics USB HID Demonstrator"
+            VALUE "CompanyName", "STMicroelectronics"
+            VALUE "FileDescription", "Usb Hid Demonstrator MFC Application"
+            VALUE "FileVersion", "1, 0, 2, 0a"
+            VALUE "InternalName", "UsbHidDemonstrator"
+            VALUE "LegalCopyright", "Copyright (C) 2010"
+            VALUE "OriginalFilename", "UsbHidDemonstrator"
+            VALUE "ProductName", "UsbHidDemonstrator Application"
+            VALUE "ProductVersion", "1, 0, 2, 0a"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_USBHIDDEMONSTRATOR_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 485
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 244
+    END
+
+    IDD_DESCRIPTOR_VIEW, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 346
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 189
+    END
+
+    IDD_FEATURE_VIEW, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 241
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 154
+    END
+
+    IDD_REPORT_VIEW, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 341
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 189
+    END
+
+    IDD_GRAPHIC_VIEW, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 288
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 209
+    END
+
+    IDD_GRAPHIC_CONFIG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 123
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About UsbHidDemonstrator..."
+    IDP_SOCKETS_INIT_FAILED "Windows sockets initialization failed."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\UsbHidDemonstrator.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

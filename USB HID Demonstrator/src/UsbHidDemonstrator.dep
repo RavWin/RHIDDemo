@@ -1,0 +1,78 @@
+# Microsoft Developer Studio Generated Dependency File, included by UsbHidDemonstrator.mak
+
+.\DesrciptorView.cpp : \
+	".\DesrciptorView.h"\
+	".\StdAfx.h"\
+	".\UsbHidDemonstrator.h"\
+	
+
+.\FeatureView.cpp : \
+	".\FeatureView.h"\
+	".\StdAfx.h"\
+	".\UsbHidDemonstrator.h"\
+	
+
+.\GraphicView.cpp : \
+	".\GraphicView.h"\
+	".\StdAfx.h"\
+	".\UsbHidDemonstrator.h"\
+	
+
+.\HexEdit.cpp : \
+	".\HexEdit.h"\
+	".\StdAfx.h"\
+	
+
+.\hexeditctrl.cpp : \
+	".\hexeditctrl.h"\
+	".\StdAfx.h"\
+	
+
+.\ReportView.cpp : \
+	".\HexEdit.h"\
+	".\hexeditctrl.h"\
+	".\ReportView.h"\
+	".\StdAfx.h"\
+	".\UsbHidDemonstrator.h"\
+	
+
+.\StdAfx.cpp : \
+	".\StdAfx.h"\
+	
+
+.\UsbHidDemonstrator.cpp : \
+	".\DesrciptorView.h"\
+	".\FeatureView.h"\
+	".\GraphicView.h"\
+	".\HexEdit.h"\
+	".\hexeditctrl.h"\
+	".\ReportView.h"\
+	".\StdAfx.h"\
+	".\UsbHidDemonstrator.h"\
+	".\UsbHidDemonstratorDlg.h"\
+	
+
+.\UsbHidDemonstrator.rc : \
+	".\res\UsbHidDemonstrator.ico"\
+	".\res\UsbHidDemonstrator.rc2"\
+	
+
+.\UsbHidDemonstratorDlg.cpp : \
+	".\DesrciptorView.h"\
+	".\FeatureView.h"\
+	".\GraphicView.h"\
+	".\HexEdit.h"\
+	".\hexeditctrl.h"\
+	".\INC\hid.h"\
+	".\INC\hidpi++.h"\
+	".\INC\hidpi.h"\
+	".\INC\hidsdi++.h"\
+	".\INC\hidsdi.h"\
+	".\INC\hidusage.h"\
+	".\INC\setupapi.h"\
+	".\INC\usb100.h"\
+	".\ReportView.h"\
+	".\StdAfx.h"\
+	".\UsbHidDemonstrator.h"\
+	".\UsbHidDemonstratorDlg.h"\
+	
