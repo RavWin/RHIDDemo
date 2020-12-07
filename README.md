@@ -1,5 +1,6 @@
-# RHIDDemo
+# RHIDDemo<br>
 STM32 USB-HID demo project, and utilitities<br>
+![RHIDDemo](/RHIDDemo.png)<br>
 **Functions**:<br>
 * Find USB-HID device by VID+PID and connect to it automatilcally or manually
 * Get/Set Feature Reports
