@@ -7,3 +7,5 @@ STM32 USB-HID demo project, and utilitities<br>
 * Get/Set Feature Reports
 * ReadWrite Device as a file
 * View report size and content in Hex
+* Send toggle LED command
+* Send slider value
